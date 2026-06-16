@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survive From The Nextbots Status</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: linear-gradient(180deg, #0f172a, #1e293b);
+        color: white;
+        position: relative;
+    }
+
+    /* Animated wave background */
+    .wave {
+        position: fixed;
+        left: 0;
+        width: 200%;
+        height: 220px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 43%;
+        animation: waveMove 18s linear infinite;
+        z-index: -2;
+    }
+
+    .wave1 {
+        bottom: -100px;
+        animation-duration: 18s;
+    }
+
+    .wave2 {
+        bottom: -130px;
+        opacity: 0.5;
+        animation-duration: 24s;
+        animation-direction: reverse;
+    }
+
+    .wave3 {
+        bottom: -160px;
+        opacity: 0.3;
+        animation-duration: 30s;
+    }
+
+    @keyframes waveMove {
+        from {
+            transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+            transform: translateX(0%) rotate(360deg);
+        }
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        text-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    .updated {
+        color: #cbd5e1;
+        font-size: 1rem;
+    }
+
+    .status-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 22px;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 15px;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .mode:hover {
+        transform: translateY(-3px);
+        background: rgba(255,255,255,0.12);
+    }
+
+    .mode-name {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+    }
+
+    .badge {
+        padding: 8px 14px;
+        border-radius: 999px;
+        color: white;
+        min-width: 150px;
+        text-align: center;
+    }
+
+    .open {
+        background: #16a34a;
+    }
+
+    .closed {
+        background: #dc2626;
+    }
+
+    .maintenance {
+        background: #eab308;
+        color: #111827;
+    }
+
+    @media (max-width: 700px) {
+        .mode {
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="wave wave1"></div>
+<div class="wave wave2"></div>
+<div class="wave wave3"></div>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Survive From The Nextbots Status</h1>
+        <div class="updated">Last Updated: 16/06/2026</div>
+    </div>
+
+    <div class="status-list">
+
+        <div class="mode">
+            <div class="mode-name">Survival</div>
+            <div class="status">
+                <div class="badge maintenance">Under Maintenance</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Celebration Site</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Be the Nextbot</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Build to Survive</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Hard Mode</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Invisible Maze</div>
+            <div class="status">
+                <div class="badge maintenance">Under Maintenance</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Latest Map</div>
+            <div class="status">
+                <div class="badge maintenance">Under Maintenance</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Nextbot Bridges</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Nextbot Catalog</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Nextbot Dodging Practice (Jan)</div>
+            <div class="status">
+                <div class="status">
+                    <div class="badge open">Open - 34</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Nextbot Roads</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Nextbot School</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Noah Takeover</div>
+            <div class="status">
+                <div class="badge maintenance">Under Maintenance</div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-name">Voting Plaza</div>
+            <div class="status">
+                <div class="badge closed">Closed</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
